@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "kotlin_first"
+rootProject.name = "kotlin_RecyclerView_Complex"

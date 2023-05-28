@@ -1,18 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.kotlin.MainActivity"
-    >
+    tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:itemCount="5"
-        tools:listitem="@layout/card_view_design" />
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="GEEKS FOR GEEKS TUTORIALS"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <!-- The horizontal recyclerView where the
+            Main-List items will be showed -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewOne"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:clipToPadding="false"
+            android:foregroundGravity="center"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <!-- The TextView where the Main-List item
+                title text will be showed -->
+            <TextView
+                android:id="@+id/algorithmTitleText"
+                style="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <!-- The vertical recyclerView where the Sub-List
+            items will be showed -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTwo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:clipToPadding="false"
+            android:foregroundGravity="center" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
